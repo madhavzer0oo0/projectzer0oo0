@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #6366F1;
+    --accent-color: #3f83f8;
+    --text-color: #333333;
+    --link-color: #2563eb;
+    --background-color: #ffffff;
+    --light-gray: #f0f0f0;
+    --gray: #808080;
+    --dark-gray: #555;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter',sans-serif;
+    text-decoration: none;
+}
+
+body{
+    height: 100vw;
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 0.1rem;
+}
+.header{
+    max-width: 1280px;
+    margin: 0  auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--text-color);
+    gap: 0.5rem;
+    text-decoration: none;
+}
+.logo_item{
+    height: 5.875rem;
+    width: 1.938rem;
+}
+.logo_text{
+    font-size: 1.7rem;
+}
+.nav{
+    display: none;
+    gap: 1.5rem;
+
+}
+@media screen and (min-width:768px){
+    .nav{
+        display: flex;
+    }
+   
+    
+}
+.navlink{
+    color: #718096;
+    font-size: 1,125rem;
+    font-weight: 600;
+    transform:  color 1s;
+}
+.navlink:hover{
+    color: var(--link-color);
+}
+.Contact{
+    display: none;
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    transform: all 0.1s;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+@media screen and (min-width:768px){
+    .Contact{
+        display: block;
+    }
+   
+    
+}
+.Contact:hover{
+    background-color: #5254f8;
+}
+.menu_button{
+    display: none;
+    border: none ;
+    border-radius: 0.375rem;
+    background-color: var(--background-color);
+
+}
+@media screen and (max-width:768px){
+    .menu_button{
+        display: block;
+    }
+    
+}
+.menu_item{
+    width: 1.5rem;
+    height: 1.5rem;
+    
+}
+.main_section{
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem;
+    margin: 0 auto;
+    
+}
+.left_content{
+  
+    align-items: center;
+    text-align: center;
+    animation: slidefromleft 1s ease forwards;
+    opacity: 0;
+
+}
+@keyframes slidefromleft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 100;
+        transform: translateX(0%);
+    }
+
+}
+
+.label{
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.section_title{
+    width: 80%;
+    font-size: 2.3rem;
+    padding: 1.1rem;
+    color: var(--text-color);
+}
+.description{
+    color: var(--dark-gray);
+    font-size: 1.13rem;
+}
+
+.button_group{
+    display: flex;
+    margin-top: 1rem;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+}
+.startbutton,.tourbutton{
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    transform: all 0.1s;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+.tourbutton{
+    background-color: var(--dark-gray);
+}
+.startbutton:hover{
+    background-color: #5254f8;
+}.tourbutton:hover{
+    background-color: var(--gray)
+}
+.right_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image{
+   border-radius: 1.2rem;
+   overflow: hidden;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   height: 57vh;
+}
+@media  screen and (min-width:768px) {
+    .main_section{
+        display: flex;
+        flex-direction: row;
+         }
+    .left_content{
+        
+        width: 50%;
+        text-align: left;
+    }
+    .section_title{
+        padding-top: 1rem;
+        padding-left: 0px;
+    }
+    .button_group{
+        justify-content:  start;
+        padding: 0;
+    }
+    .label{
+     font-size: 0.9rem;
+    }
+    .section_title{
+        font-size: 4rem;
+        font-weight: bold;
+    }
+    .image{
+        height: 70vh;
+    }
+    .description{
+        font-size: 1.1rem;
+        color: var(--gray);
+        width: 80%;
+
+    }
+    .company_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        animation: slidefromleft 1s ease forwards;
+        
+    }
+    .company_grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3rem;
+        padding: 1rem;
+        background-color: var(--light-gray);
+        border: none;
+        border-radius: 0.625rem;
+        margin-top: 1.25rem;
+    }
+    .company_logo{
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--gray);
+        display: flex;
+        gap: 0.5rem;
+         
+    }
+    .svg_image{
+        height: 1.3rem;
+
+    }
+    .logo_text{
+        font-size: 1rem;
+    }
+    @media screen and (min-width:648px) {
+        .company_grid{
+            grid-template-columns: repeat(4,1fr);
+        }
+        
+    }
+    .feature-container{
+        background-color: var(--light-gray);
+        margin-top: 2rem;
+        padding: 2.5rem 0;
+        text-align: center;
+    }
+    .feature-content{
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    .main-info{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .main-title{
+      font-size: 2.2rem;
+
+    }
+    .main-description{
+        color: var(--gray);
+        font-size: 1rem;
+    }
+    .feature-grid{
+        display: grid;
+       
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 1.3rem;
+       grid-gap: 2rem;
+
+    }
+    @media screen and (max-width:768px) {
+        .feature-grid{
+            grid-template-columns: repeat(1,1fr);
+        }
+        
+    }
+    .feature-svg{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .icon-container{
+        background-color: var(--background-color);
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .feature-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(95, 95, 131);
+        padding: 2rem;
+        border-radius: 1rem;
+        gap: 1rem;
+    }
+    .feature-info{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .feature-title{
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+    .feature-card:nth-child(2){
+        background-color: #ff6289;
+    }
+    .feature-card:nth-child(3){
+        background-color: #fcbf58;
+    }
+    .feature-card:nth-child(4){
+        background-color: #44bfc3;
+    }
+    .feature-card:nth-child(5){
+        background-color: #77b05d;
+    }
+    .feature-card:nth-child(6){
+        background-color: #ff6289;
+    }
+    .feature-card:nth-child(1){
+        background-color: #4a90e2;
+    }
+    .testimonial-container{
+        background-color: var(--background-color);
+         padding: 0 2rem;
+         margin: 0 auto;
+         max-width: 1280px;
+
+    }
+    .testimonial-content{
+        display: flex;
+        flex-direction: column;
+       
+        gap: 2rem;
+    }
+  
+    .testimonial-title{
+        font-size: 1.875rem;
+        font-weight: bold;
+    }
+    .testimonial-grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 2rem;
+    
+    }
+    .testimonial-card{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        border-radius: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        gap: 1.6rem;
+        transition: transform 0.3s ease ,box-shadow 0.3s ease;
+
+    }
+    .testimonial-card:hover{
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border: 1px solid blue;
+    
+    }
+    .testimonial-avatar img{
+        height: 5rem;
+        width: 5rem;
+    }
+    .testimonial-text{
+        color: #555;
+        font-size: 0.875rem;
+
+    }
+    .testimonial-name{
+        color: var(--primary-color);
+        font-size: 1rem;
+    }
+    .testimonial-desc{
+        font-size: 0.875rem;
+        color: #777;
+    }
+    .newsletter-container{
+        background-color: var(--background-color);
+        padding: 2rem;
+        max-width: 1280px;
+        height: 50vh;
+        margin: 0 auto;
+    }
+    .newsletter-content{
+        display: flex;
+        flex-direction: row;
+        background-color: var(--light-gray);
+        height: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .news-left{
+        width: 50%;
+
+    }
+    .news-left img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+
+    }
+    .news-right{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+        justify-content: center;
+        align-items:start;
+    }
+    .news-title{
+        font-size: 2.5rem;
+        font-weight: bolder;
+        color: var(--primary-color);
+    }
+    .news-info{
+        padding: 0 3rem;
+
+    }
+    .news-desc{
+        text-align: left;
+        color: #777;
+    }
+    .news-form{
+        padding: 0 3rem;
+        display: flex;
+        flex-direction: row;
+       
+        margin-bottom: 1rem;
+        gap: 0.6rem;
+    }
+    .news-email{
+        background-color: var(--background-color);
+        width: 100%;
+        color: #333;
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0.5rem 0.75rem;
+    }
+    .news-email:focus{
+        border-color:#2563eb;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    }
+    .news-send-button{
+        background-color: var(--primary-color);
+        color: var(--background-color);
+        border: none;
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+    }
+    .privacy-policy{
+        padding: 0 3rem;
+        font-size: 0.7rem ;
+        color: #777;
+    }
+    .news-link{
+        text-decoration: underline;
+        color:#4a90e2;
+    }
+    .footer-container{
+        background-color: var(--background-color);
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        max-width: 1280px;
+    }
+    .footer{
+        max-width: 1280px;
+        padding: 1rem;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .footer-top{
+        width: 34%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+
+    }
+    .logo-svg{
+        width: 2rem;
+        height: 6rem;
+    }
+    .social-icon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .logo-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: black;
+    }
+    .comp-logo{
+    
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: -1.7rem;
+    }
+    .filler-text{
+        font-size: 1rem;
+        color: #777;
+
+    }
+    .footer-grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 9rem;
+        padding: 2rem;
+    }
+    .footer-grid-heading{
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--text-color);
+        margin-bottom: 1.5rem;
+    }
+    ul{
+        list-style-type: none;
+    }
+    .footer-link{
+        color: #777;
+        font-size: 0.9rem;
+        
+    }.footer-links-list{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        
+    }
+    .social{
+        display: flex;
+        gap: 0.8rem;
+    }
+    .footer-copyright{
+        color: var(--gray);
+        font-size: 0.75rem;
+        padding-bottom: 2rem;
+        margin-top: 1.5rem;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <head class="header">
+            <a href="#logo" class="logo">
+                <img src="img/StudySyn.svg" alt="" class="logo_item">
+                <span class="logo_text">StudySync</span>
+            </a>
+            <nav class="nav">
+                <a href="#home" class="navlink">Home</a>
+                <a href="#pricing" class="navlink">Pricing</a>
+                <a href="#blog" class="navlink">Blog</a>
+                <a href="#about" class="navlink">About
+                </a>
+            </nav>
+            <a href="#contact" class="Contact">
+               Contact Us
+            </a>
+            <button class="menu_button">
+                <img src="img/Hamburger.svg" alt="" class="menu_item">
+            </button>
+        </head>
+    </div>
+    <div class="content">
+        <section class="main_section">
+            <div class="left_content"> 
+                <p class="label">Very proud to introduce</p>
+                <h1 class="section_title">Seamless Learning for Brighter Futures</h1>
+                <p class="description"> Our innovative platform offers an effortless and seamless approach to learning, empowering students of all ages to achieve brighter futures. Join us on a transformative journey to simplify education and unlock your full potential.</p>
+                <div class="button_group">
+                    <a href="#starttour" class="startbutton">Start Tour</a>
+                    <a href="#taketour" class="tourbutton">Take Tour</a>
+                </div>
+            </div>
+            <div class="right_content">
+                <img src="img/usgs-hoS3dzgpHzw-unsplash.jpg" alt="" class="image">
+            </div>
+        </section>
+    </div>
+    <div class="company_container">
+        <h2>Trusted by the best</h2>
+       <div class="company_grid">
+        <div class="company_logo">
+            <img src="img/Google.svg" alt="" class="svg_image">
+            <span class="logo_text">Google</span>
+        </div>
+        <div class="company_logo">
+            <img src="img/Microsoft.svg" alt="" class="svg_image">
+            <span class="logo_text">Microsoft</span>
+        </div>
+        <div class="company_logo">
+            <img src="img/instagram.svg" alt="" class="svg_image">
+            <span class="logo_text">Instagram</span>
+        </div>
+        <div class="company_logo">
+            <img src="img/VectorEdu.svg" alt="" class="svg_image">
+            <span class="logo_text">VectorEdu</span>
+        </div>
+    </div>
+    </div>
+    <div class="feature-container">
+        <div class="feature-content">
+            <div class="main-info">
+                <h2 class="main-title">
+                    Our competitive advantage
+                </h2>
+                <p class="main-description">
+                    This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of real written text but is random or otherwise generated.
+                </p>
+            </div>
+            
+            <div class="feature-grid">
+                <!-- card 1 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg" src="img/PersonalizedLearn.svg">
+                       
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Personalized Learning
+                        </div>
+                        <div class="feature-description">
+                            Offer tailored learning experiences through AI and machine learning to cater to individual student needs.
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg" src="img/Affordability.svg">
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Affordability
+                        </div>
+                        <div class="feature-description">
+                            Provide high-quality education at an affordable price point, making it accessible to a broader audience.
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg" src="img/IndustryPatner.svg"/>
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Industry Partnerships
+                        </div>
+                        <div class="feature-description">
+                            Collaborate with well-known companies and institutions to offer accredited courses and certifications, adding credibility to your offerings.
+                        </div>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg" src="img/InnovativeTech.svg"/>
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Innovative Technology
+                        </div>
+                        <div class="feature-description">
+                            Utilize cutting-edge technology, such as augmented reality or virtual reality, to create immersive learning experiences.
+                        </div>
+                    </div>
+                </div>
+                <!-- card 5 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg" src="img/IndustryPatner.svg"/>
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Responsive Support
+                        </div>
+                        <div class="feature-description">
+                            Provide exceptional customer support and assistance to students and educators.
+                        </div>
+                    </div>
+                </div>
+                <!-- card 6 -->
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <img class="feature-svg" src="img/Analytics.svg"/>
+                    </div>
+                    <div class="feature-info">
+                        <div class="feature-title">
+                            Analytics and Insights
+                        </div>
+                        <div class="feature-description">
+                            Offer detailed progress tracking and analytics to help students and teachers monitor performance and make data-driven decisions.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonial-container">
+        <div class="testimonial-content">
+            <h2 class="testimonial-title">
+                What Others Say About Us
+            </h2>
+            <div class="testimonial-grid">  
+                <!-- card 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        “StudySync revolutionized my classroom! Engaging content and teacher resources make learning enjoyable. Highly recommended for educators.”
+                    </div>
+                    <div class="testimonial-avatar">
+                        <img src="img/avatar1.png"/>
+                    </div>
+                    <div class="testimonial-details">
+                        <h3 class="testimonial-name"> 
+                            Sarah Johnson
+                        </h3>
+                        <p class="testimonial-desc">
+                            8th Grade English Teacher
+                        </p>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        “StudySync transformed our family's learning journey. Safe, interactive, and progress tracking features are invaluable for parents.”
+                    </div>
+                    <div class="testimonial-avatar">
+                        <img src="img/avatar2.png"/>
+                    </div>
+                    <div class="testimonial-details">
+                        <h3 class="testimonial-name"> 
+                            Sarah Johnson
+                        </h3>
+                        <p class="testimonial-desc">
+                            8th Grade English Teacher
+                        </p>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        “StudySync, a true game-changer! Flexible content, tailored assessments, and excellent support. Integral to our school district's success.”
+                    </div>
+                    <div class="testimonial-avatar">
+                        <img src="img/avatar3.png"/>
+                    </div>
+                    <div class="testimonial-details">
+                        <h3 class="testimonial-name"> 
+                            Sarah Johnson
+                        </h3>
+                        <p class="testimonial-desc">
+                            8th Grade English Teacher
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="newsletter-container">
+        <div class="newsletter-content">
+            <!-- left part  -->
+            <div class="news-left">
+                <img src="img/news.png" loading="lazy" alt="news-img"/>
+            </div>
+            <!-- right part -->
+            <div class="news-right">
+
+                <div class="news-info">
+                    <h2 class="news-title">Get the latest updates</h2>
+                    
+                    <p class="news-desc">Sign up for our newsletter</p>
+                </div>
+
+                <form class="news-form">
+
+                    <input class="news-email" placeholder="Email" />
+                    <button class="news-send-button">
+                        Send
+                    </button>
+
+                </form>
+
+                <div class="privacy-policy">
+                    By signing up to our newsletter you agree to our
+                    <a class="news-link">
+                        Terms of Service
+                    </a>
+                    and
+                    <a class="news-link">
+                        Privacy policy
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <footer class="footer">
+
+            <div class="footer-top">
+
+                <div class="comp-logo">
+                    <a class="logo-link" href="#">
+                        <img class="logo-svg" src="img/StudySyn (1).svg"/>
+                        StudySync
+                    </a>
+                </div>
+                <p class="filler-text">Seamless Learning for Brighter Futures.</p>
+                <div class="social">
+                        <a class="social-link" href="#">
+                            <img src="img/instagram.svg" class="social-icon" />
+                        </a>
+                        <a class="social-link">
+                            <img src="img/linkedin.svg" class="social-icon" />
+                        </a>
+                        <a class="social-link">
+                            <img src="img/Microsoft.svg" class="social-icon" />
+                        </a>
+                        <a class="social-link">
+                            <img src="img/twitter.svg" class="social-icon" />
+                        </a>
+                </div>
+            </div>
+
+            <div class="footer-grid">
+                        <!-- column 1 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Products
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#overview" class="footer-link">Overview</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Solutions</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Pricing</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Customers</a>
+                                </li>
+                            </ul>
+                </div>
+                        <!-- column 2 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Company
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#overview" class="footer-link">About</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Investor Relations</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Jobs</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Press</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Blog</a>
+                                </li>
+                            </ul>
+                </div>
+                        <!-- column 3 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Support
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#overview" class="footer-link">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Documentation</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Chat</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">FAQ</a>
+                                </li>
+                            </ul>
+                </div>
+                        <!-- column 4 -->
+                <div class="footer-grid-column">
+                            <div class="footer-grid-heading">
+                                Legal
+                            </div>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#overview" class="footer-link">Terms of Service</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#overview" class="footer-link">Cookie Settings</a>
+                                </li>
+                                
+                            </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="footer-copyright">
+            © 2021 - Present StudySync. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
